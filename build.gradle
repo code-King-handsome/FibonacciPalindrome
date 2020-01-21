@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'com.github.sherter.google-java-format' version '0.8'
+}
+
+group 'com.example'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-log4j12:1.7.30'
+    compile 'org.slf4j:slf4j-api:1.7.30'
+    compile 'log4j:log4j:1.2.17'
+    testCompile group: 'org.testng', name: 'testng', version: '6.8.7'
+}
+
+test {
+    useTestNG()
+}
